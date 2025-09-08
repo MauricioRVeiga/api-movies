@@ -60,8 +60,28 @@ npm install
 
 ### 3️⃣ Configurar o MongoDB
 
+Este projeto pode ser executado com o **MongoDB local** ou com o **MongoDB Atlas**.
+
+#### 🔹 Usando MongoDB local
+
 Certifique-se de que o MongoDB está rodando localmente na porta padrão (`27017`).  
-Se preferir usar o MongoDB Atlas, altere a string de conexão no arquivo `index.js`.
+A conexão será feita diretamente no arquivo `index.js`.
+
+#### 🔹 Usando MongoDB Atlas
+
+1. Crie uma conta no [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+2. Crie um cluster e obtenha sua string de conexão.
+3. Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
+
+```env
+MONGODB_URI=your_connection_string_here
+```
+
+4. No `index.js`, certifique-se de que a aplicação está utilizando `process.env.MONGODB_URI` para conectar.
+
+> ⚠️ Não se esqueça de adicionar o `.env` ao `.gitignore` para proteger suas credenciais.
+
+---
 
 ### 4️⃣ Rodar o servidor
 
