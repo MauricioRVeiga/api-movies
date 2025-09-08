@@ -27,16 +27,18 @@ Este projeto foi criado como parte das atividades da disciplina de Desenvolvimen
 
 ## 📂 Estrutura do Projeto
 
-api-movies/ ├── models/ # Modelos do Mongoose │
-               └── Movie.js 
-            ├── services/ # Lógica de negócio 
-            │ └── movieService.js 
-            ├── controllers/ # Controladores das rotas 
-            │ └── movieController.js  
-            ├── routes/ # Definição das rotas  
-            │ └── movieRoutes.js  
-            ├── index.js # Arquivo principal  
-            ├── package.json 
+api-movies/
+
+  ├── models/ # Modelos do Mongoose 
+     │└── Movie.js 
+  ├── services/ # Lógica de negócio 
+      │ └── movieService.js 
+  ├── controllers/ # Controladores das rotas 
+      │ └── movieController.js  
+  ├── routes/ # Definição das rotas  
+      │ └── movieRoutes.js  
+  ├── index.js # Arquivo principal  
+  ├── package.json 
 
 ---
 
