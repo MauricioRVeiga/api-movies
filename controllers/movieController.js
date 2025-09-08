@@ -1,4 +1,4 @@
-import movieService from "../services/movieService.js";
+import movieService from "../services/movieServices.js";
 import { ObjectId } from "mongodb";
 
 const getAllMovies = async (req, res) => {
