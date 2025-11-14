@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import MovieList from '@/components/MovieList';
+import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -40,8 +41,8 @@ export default function Home() {
       
       <main className={styles.main}>
         <div className={styles.hero}>
-          <h1>🎬 Catálogo de Filmes</h1>
-          <p>Explore nossa coleção de filmes incríveis</p>
+          <h1>Catálogo de Filmes</h1>
+          <p>Encontre e explore sua próxima sessão de cinema</p>
         </div>
 
         {loading && (
@@ -63,7 +64,7 @@ export default function Home() {
         {!loading && !error && (
           <>
             <div className={styles.stats}>
-              <p>📊 Total de filmes: <strong>{movies.length}</strong></p>
+              <p>Total de filmes cadastrados: <strong>{movies.length}</strong></p>
             </div>
             <MovieList movies={movies} />
           </>
@@ -71,8 +72,8 @@ export default function Home() {
 
         {!loading && !error && movies.length === 0 && (
           <div className={styles.empty}>
-            <p>🎭 Nenhum filme cadastrado ainda.</p>
-            <p>Use a API para adicionar filmes!</p>
+            <p>Nenhum filme cadastrado ainda.</p>
+            <p>Adicione filmes usando a API para começar!</p>
           </div>
         )}
       </main>
